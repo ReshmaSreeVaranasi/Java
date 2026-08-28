@@ -11,12 +11,12 @@ class Child extends Parent {
     }
 }
 
-public class Main {
+public class SimpleInheritance {
     public static void main(String[] args) {
 
-        Child obj = new Child();
+        Child c = new Child();
 
-        obj.displayParent();
-        obj.displayChild();
+        c.displayParent();
+        c.displayChild();
     }
 }
