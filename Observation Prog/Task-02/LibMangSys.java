@@ -24,11 +24,11 @@ class Book {
     }
 
     // Getters
-    int getBookId() {
+    int getbookId() {
         return bookId;
     }
 
-    String getBookName() {
+    String getbookName() {
         return bookName;
     }
 
