@@ -41,11 +41,11 @@ class Book {
     }
 
     // Setters
-    void setBookId(int bookId) {
+    void setbookId(int bookId) {
         this.bookId = bookId;
     }
 
-    void setBookName(String bookName) {
+    void setbookname(String bookName) {
         this.bookName = bookName;
     }
 
