@@ -24,11 +24,11 @@ class Book {
     }
 
     // Getters
-    int getbookId() {
+    int getBookId() {
         return bookId;
     }
 
-    String getbookName() {
+    String getBookName() {
         return bookName;
     }
 
@@ -41,11 +41,11 @@ class Book {
     }
 
     // Setters
-    void setbookId(int bookId) {
+    void setBookId(int bookId) {
         this.bookId = bookId;
     }
 
-    void setbookname(String bookName) {
+    void setBookname(String bookName) {
         this.bookName = bookName;
     }
 
