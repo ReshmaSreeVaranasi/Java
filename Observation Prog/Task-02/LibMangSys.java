@@ -45,7 +45,7 @@ class Book {
         this.bookId = bookId;
     }
 
-    void setBookname(String bookName) {
+    void setBookName(String bookName) {
         this.bookName = bookName;
     }
 
