@@ -1,9 +1,11 @@
 
 package javacore;
 
-// Interface
 interface PaymentService {
-    void pay(String upi, double amount) throws Exception;
+    void pay(String upi, double amount)
+            throws InvalidUPIException, InvalidAmountException,
+            InsufficientBalanceException;
+
     void checkBalance();
 }
 
@@ -40,7 +42,9 @@ class Wallet {
         this.balance = balance;
     }
 
-    public void addMoney(double amount) throws Exception {
+    public void addMoney(double amount)
+            throws InvalidAmountException {
+
         if (amount <= 0) {
             throw new InvalidAmountException("Invalid amount");
         }
@@ -73,9 +77,11 @@ class UPIPayment implements PaymentService {
         this.wallet = wallet;
     }
 
-    public void pay(String upi, double amount) throws Exception {
+    public void pay(String upi, double amount)
+            throws InvalidUPIException, InvalidAmountException,
+            InsufficientBalanceException {
 
-        if (upi == null || !upi.contains("@")) {
+        if (upi == null || !upi.matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+")) {
             throw new InvalidUPIException("Invalid UPI ID");
         }
 
@@ -101,7 +107,7 @@ class UPIPayment implements PaymentService {
 }
 
 // Main class
-public class Main {
+public class UpiPayment {
     public static void main(String[] args) {
 
         Wallet w = new Wallet(
@@ -121,9 +127,6 @@ public class Main {
             System.out.println(e.getMessage());
         }
         catch (InsufficientBalanceException e) {
-            System.out.println(e.getMessage());
-        }
-        catch (Exception e) {
             System.out.println(e.getMessage());
         }
         finally {
