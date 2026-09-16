@@ -69,7 +69,7 @@ class Wallet {
     }
 }
 
-// Payment class
+// UPI Payment class
 class UPIPayment implements PaymentService {
     private Wallet wallet;
 
@@ -81,7 +81,7 @@ class UPIPayment implements PaymentService {
             throws InvalidUPIException, InvalidAmountException,
             InsufficientBalanceException {
 
-        if (upi == null || !upi.matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+")) {
+        if (upi == null || !upi.contains("@")) {
             throw new InvalidUPIException("Invalid UPI ID");
         }
 
