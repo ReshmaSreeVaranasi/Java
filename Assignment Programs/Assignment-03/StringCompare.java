@@ -9,3 +9,6 @@ public class StringCompare {
         System.out.println(str1.compareTo(str2));
     }
 }
+
+/*Output:
+-1     */
