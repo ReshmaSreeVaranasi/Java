@@ -8,3 +8,6 @@ public class CharacterAt {
         System.out.println(str.charAt(1));
     }
 }
+
+Output:
+e
