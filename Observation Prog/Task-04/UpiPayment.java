@@ -1,3 +1,4 @@
+package javacore;
 // PaymentService Interface
 interface PaymentService {
 
